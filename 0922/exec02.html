@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화포토컷 실습예제</title>
+     <!-- 폰트 어썸 -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+     <style>
+
+        #banner{
+            width:660px;
+            height:450px;
+            position:relative;
+            border:2px solid #000; 
+        }
+        #banner img{
+            width:100%;
+        }
+        i.fas{
+            position:absolute;
+            top:44%;
+            font-size:50px;
+            background-color:rgba(0,0,0,.6);
+            color:#fff;
+            width:50px;line-height:100px;
+            text-align:center;
+
+        }
+        i.fa-angle-left{
+            left:0px;
+        }
+        i.fa-angle-right{
+            right:0px;
+        }
+        .h2{
+            display:block;
+        }
+        #page{
+            display:block;
+            color:#ccc;
+            font-size:14px;
+            padding:4px 8px;
+        }
+     </style>
+</head>
+<body>
+    <h3>탑건 포토</h3>
+    <span id="page"></span>
+    <article id="banner">
+        <img src="./Topgun_images/movie_image1.jpg" alt="" id="photo">
+        <i class="fas fa-angle-left"></i>
+        <i class="fas fa-angle-right"></i>
+    </article>
+
+    <script>
+        let n = 1;
+
+        function nextImg(){
+            if(n==10){
+                n = 1;
+            }else{
+                n++;
+            }
+            console.log(n);
+            document.getElementById('page').innerHTML = n+'/10';
+            document.getElementById('photo').src='./Topgun_images/movie_image'+n+'.jpg';
+        }
+
+        function prevImg(){
+            if(n==1){
+                n = 10;
+            }else{
+                n--;
+            }
+            console.log(n);
+            document.getElementById('page').innerHTML = n+'/10';
+            document.getElementById('photo').src='./Topgun_images/movie_image'+n+'.jpg';
+        }
+
+        const l_btn = document.querySelector('.fa-angle-left');
+        const r_btn = document.querySelector('.fa-angle-right');
+
+        l_btn.addEventListener('click', function(e){
+            e.preventDefault();
+            prevImg();
+        })
+
+        r_btn.addEventListener('click', function(e){
+            e.preventDefault();
+            nextImg();
+        })
+    </script>
+</body>
+</html>
