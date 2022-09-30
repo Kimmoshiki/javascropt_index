@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+*{padding:0px; margin:0px;}
+body{
+    font-family:"맑은 고딕",arial,"sans-serif";
+    font-size:12px;
+    color:#333333;
+}
+
+.title01{
+    text-align:center;
+    margin-top:6px;
+    line-height:80px;
+    font-size:24px;
+}
+.title02{
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    line-height:50px;
+}
+i.fas{
+    float:right;
+    padding-right:10px;
+    font-size:16px;
+}
+.border01{
+    border-top:3px solid #e7bf3a;
+    border-bottom:3px solid #e7bf3a;
+}
+
+.bgcolor01{background:#e7bf3a;}
+
+section{margin-bottom:10px;}
+dl{
+    margin:0px 5px;
+    overflow:hidden;
+}
+dt{
+    font-size:14px;
+    color:#ffffff;
+    padding:12px 0px;
+    font-weight:bold;
+    text-indent:10px;
+    border-bottom:1px solid #acacac;
+}
+dd{
+    background:rgb(208, 222, 233);
+    border-bottom:1px solid #acacac;
+}
+dd > a{
+    font-size:13px;
+    line-height:40px;
+    color:#333333;
+    text-indent:20px;
+    text-decoration:none;
+    display:block;
+    transition:0.3s;
+}
+dd > a:hover{
+    font-weight:bold;
+    background-color:#ffff9f;
+    text-indent:50px;
+    box-shadow:0px 0px 3px #acacac;
+    transform:scale(1.1);
+}
+
+/* 푸터영역 */
+footer{
+    line-height:50px;
+    text-align:center;
+    background:#333333;
+}
+footer > address{
+    font-style:nomal;
+    color:#ffffff;
+}
